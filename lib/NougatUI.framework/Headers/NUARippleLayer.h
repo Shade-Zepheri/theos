@@ -1,18 +1,18 @@
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
 
+@class NUARippleLayer;
+
+typedef void (^NUARippleCompletionBlock)(void);
+
 @interface NUARippleLayer : CAShapeLayer
-@property (getter=isStartAnimationActive, assign, readonly, nonatomic) BOOL startAnimationActive;
-@property (assign, nonatomic) CGFloat endAnimationDelay;
-
-@property (assign, nonatomic) CGFloat finalRadius;
-@property (assign, nonatomic) CGFloat initialRadius;
-@property (assign, nonatomic) CGFloat maxRippleRadius;
-
-@property (strong, nonatomic) UIColor *rippleColor;
+@property (getter=isStartAnimationActive, readonly, nonatomic) BOOL startAnimationActive;
+@property (assign, nonatomic) CFTimeInterval rippleTouchDownStartTime;
 
 - (void)startRippleAtPoint:(CGPoint)point animated:(BOOL)animated;
+- (void)endRippleAnimated:(BOOL)animated completion:(NUARippleCompletionBlock)completion;
 
-- (void)endRippleAtPoint:(CGPoint)point animated:(BOOL)animated;
+- (void)fadeInRippleAnimated:(BOOL)animated;
+- (void)fadeOutRippleAnimated:(BOOL)animated;
 
 @end

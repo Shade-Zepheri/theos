@@ -1,11 +1,13 @@
 #import <UIKit/UIKit.h>
+#import <NougatServices/NougatServices.h>
 
 @protocol NUANotificationShadePageContentViewControllerDelegate <NSObject>
+@property (strong, readonly, nonatomic) NUAPreferenceManager *notificationShadePreferences;
 @required
 
 - (void)contentViewControllerWantsDismissal:(UIViewController *)contentViewController completely:(BOOL)completely;
 - (void)contentViewControllerWantsExpansion:(UIViewController *)contentViewController;
-- (CGFloat)contentViewControllerRequestsInteractiveHeight:(UIViewController *)contentViewController;
+- (NUAPreferenceManager *)notificationShadePreferences;
 
 @end
 

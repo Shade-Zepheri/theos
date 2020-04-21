@@ -1,9 +1,9 @@
 #import <UIKit/UIKit.h>
-#import "NUADisplayLink.h"
 #import "NUANotificationShadeViewController.h"
 #import <BaseBoard/BaseBoard.h>
 #import <CoverSheet/CoverSheet.h>
 #import <FrontBoard/FrontBoard.h>
+#import <NougatServices/NougatServices.h>
 #import <SpringBoard/SBIgnoredForAutorotationSecureWindow.h>
 #import <SpringBoard/SpringBoard-Umbrella.h>
 #import <UIKit/UIKit+Private.h>
@@ -24,6 +24,7 @@ typedef NS_ENUM(NSUInteger, NUANotificationShadeState) {
     CGPoint _initalTouchLocation;
 }
 
+@property (strong, readonly, nonatomic) NUAPreferenceManager *preferences;
 @property (nonatomic) NUANotificationShadeState state;
 @property (strong, nonatomic) id<BSInvalidatable> idleTimerDisableAssertion;
 @property (strong, nonatomic) FBDisplayLayoutElement *displayLayoutElement;

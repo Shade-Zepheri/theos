@@ -6,7 +6,7 @@
 @protocol NUANotificationsObserver <NSObject>
 
 - (void)notificationRepositoryAddedNotification:(NUACoalescedNotification *)newNotification;
-- (void)notificationRepositoryUpdatedNotification:(NUACoalescedNotification *)updatedNotification updateIndex:(BOOL)updateIndex;
+- (void)notificationRepositoryUpdatedNotification:(NUACoalescedNotification *)updatedNotification removedRequest:(BOOL)removedRequest;
 - (void)notificationRepositoryRemovedNotification:(NUACoalescedNotification *)removedNotification;
 
 @end
@@ -16,7 +16,7 @@ typedef void (^NUANotificationsObserverHandler)(id<NUANotificationsObserver> obs
 @interface NUANotificationRepository : NSObject {
     NSHashTable *_observers;
     dispatch_queue_t _callOutQueue;
-    NSDictionary<NSString *, NSDictionary<NSString *, NUACoalescedNotification *> *> *_notifications;
+    BOOL _shouldRegenerate;
 }
 
 @property (class, strong, readonly) NUANotificationRepository *defaultRepository;
