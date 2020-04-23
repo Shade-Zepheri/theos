@@ -24,6 +24,6 @@
 @property (strong, readonly, nonatomic) UIImage *icon;
 @property (strong, readonly, nonatomic) UIImage *selectedIcon;
 
-- (void)refreshImage;
+- (void)refreshAppearance;
 
 @end
