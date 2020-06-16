@@ -28,6 +28,7 @@
 #import "NUAStatusBarContentView.h"
 #import "NUAStatusBarModuleController.h"
 #import "NUAToggleButton.h"
+#import "NUAToggleInstance.h"
 #import "NUAToggleInstancesProvider.h"
 #import "NUATogglesContentView.h"
 #import "NUATogglesModuleController.h"
