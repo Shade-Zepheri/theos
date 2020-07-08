@@ -7,7 +7,7 @@ typedef NS_ENUM(NSUInteger, NUANotificationType) {
     NUANotificationTypeMedia
 };
 
-@interface NUACoalescedNotification : NSObject
+@interface NUACoalescedNotification : NSObject <NSCopying>
 @property (copy, readonly, nonatomic) NSString *sectionID;
 @property (copy, readonly, nonatomic) NSString *threadID;
 @property (copy, readonly, nonatomic) NSString *title;
@@ -20,7 +20,7 @@ typedef NS_ENUM(NSUInteger, NUANotificationType) {
 @property (readonly, nonatomic) BOOL hasCustomActions;
 @property (copy, readonly, nonatomic) NSArray<NCNotificationAction *> *customActions;
 @property (strong, readonly, nonatomic) NUANotificationEntry *leadingNotificationEntry;
-@property (copy, readonly, nonatomic) NSArray<NUANotificationEntry *> *entries;
+@property (readonly, nonatomic) NSArray<NUANotificationEntry *> *allEntries;
 @property (assign, nonatomic) NUANotificationType type;
 @property (getter=isEmpty, readonly, nonatomic) BOOL empty;
 

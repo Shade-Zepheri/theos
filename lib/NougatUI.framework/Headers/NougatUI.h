@@ -5,6 +5,7 @@
 #import "NUADateLabelRepository.h"
 #import "NUAFlipswitchButton.h"
 #import "NUAImageColorCache.h"
+#import "NUAImageColorInfo.h"
 #import "NUAMainTableViewController.h"
 #import "NUAMediaControlsView.h"
 #import "NUAMediaHeaderView.h"
@@ -32,3 +33,4 @@
 #import "NUAToggleInstancesProvider.h"
 #import "NUATogglesContentView.h"
 #import "NUATogglesModuleController.h"
+#import "UIColor+Tetradic.h"
