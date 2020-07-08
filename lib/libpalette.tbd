@@ -1,0 +1,32 @@
+--- !tapi-tbd-v2
+archs:                 [ armv7, arm64, arm64e ]
+platform:              ios
+install-name:          "/usr/lib/libpalette.dylib"
+current-version:       0
+compatibility-version: 0
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, arm64, arm64e ]
+    symbols:              [ _$s10libpalette19UIImageColorPaletteC7primary9secondary8tertiaryACSo7UIColorC_AHSgAItcfC,
+                            _$s10libpalette19UIImageColorPaletteC7primary9secondary8tertiaryACSo7UIColorC_AHSgAItcfCTq,
+                            _$s10libpalette19UIImageColorPaletteC7primary9secondary8tertiaryACSo7UIColorC_AHSgAItcfc,
+                            _$s10libpalette19UIImageColorPaletteCACycfC,
+                            _$s10libpalette19UIImageColorPaletteCACycfc,
+                            _$s10libpalette19UIImageColorPaletteCMa,
+                            _$s10libpalette19UIImageColorPaletteCMn,
+                            _$s10libpalette19UIImageColorPaletteCN,
+                            _$s10libpalette19UIImageColorPaletteCfD,
+                            _$s10libpalette20UIImageResizeQualityO8rawValueACSgSi_tcfC,
+                            _$s10libpalette20UIImageResizeQualityO8rawValueSivg,
+                            _$s10libpalette20UIImageResizeQualityO8rawValueSivpMV,
+                            _$s10libpalette20UIImageResizeQualityOMa,
+                            _$s10libpalette20UIImageResizeQualityOMn,
+                            _$s10libpalette20UIImageResizeQualityON,
+                            _$s10libpalette20UIImageResizeQualityOSHAAMc,
+                            _$s10libpalette20UIImageResizeQualityOSQAAMc,
+                            _$s10libpalette20UIImageResizeQualityOSYAAMc,
+                            _$sSo7UIImageC10libpaletteE20retrieveColorPalette7quality10completionyAC0A13ResizeQualityO_yAC0adE0CSgctF,
+                            _$sSo7UIImageC10libpaletteE20retrieveColorPalette7qualityAC0adE0CSgAC0A13ResizeQualityO_tF,
+                            _main ]
+    objc-classes:         [ __TtC10libpalette19UIImageColorPalette ]
+...
