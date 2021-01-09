@@ -1,13 +1,13 @@
 #import <UIKit/UIKit.h>
 #import "NUAToggleInfo.h"
 
-typedef NS_ENUM(NSUInteger, NUADrawerTheme) {
+typedef NS_ENUM(NSInteger, NUADrawerTheme) {
     NUADrawerThemeNexus,
     NUADrawerThemePixel,
     NUADrawerThemeOreo
 };
 
-typedef NS_ENUM(NSUInteger, NUANotificationPreviewSetting) {
+typedef NS_ENUM(NSInteger, NUANotificationPreviewSetting) {
     NUANotificationPreviewSettingAlways,
     NUANotificationPreviewSettingWhenUnlocked,
     NUANotificationPreviewSettingNever
@@ -26,6 +26,7 @@ static NSString *const NUAPreferencesUsesExternalColorKey = @"colorflowEnabled";
 static NSString *const NUAPreferencesUsesSystemAppearanceKey = @"usesSystemAppearance";
 static NSString *const NUAPreferencesNotificationPreviewSettingKey = @"notificationPreviewSetting";
 static NSString *const NUAPreferencesHideStatusBarModuleKey = @"hideStatusBar";
+static NSString *const NUAPreferencesDisableGesturesKey = @"disableGestures";
 
 @interface NUAPreferenceManager : NSObject
 @property (class, strong, readonly) NUAPreferenceManager *sharedSettings;
@@ -47,6 +48,7 @@ static NSString *const NUAPreferencesHideStatusBarModuleKey = @"hideStatusBar";
 @property (assign, readonly, nonatomic) NUANotificationPreviewSetting notificationPreviewSetting;
 
 @property (assign, readonly, nonatomic) BOOL hideStatusBarModule;
+@property (assign, readonly, nonatomic) BOOL disableGestures;
 
 + (BOOL)_deviceHasNotch;
 + (NSString *)carrierName;
